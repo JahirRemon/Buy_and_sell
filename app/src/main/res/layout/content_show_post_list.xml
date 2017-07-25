@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.example.mdjahirulislam.final_project_bitm.activity.ShowPostListActivity"
+        tools:showIn="@layout/app_bar_show_post_list">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/postListSearchET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:imeOptions="actionGo"
+                android:focusableInTouchMode="true"
+                android:hint="Search"
+                android:textSize="18sp"
+                android:scrollHorizontally="true"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".8"
+                android:background="@android:drawable/ic_search_category_default"
+                android:onClick="filterByCustomSearch"/>
+
+            <Spinner
+                android:id="@+id/postListSortSpinner"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".6"
+                android:background="@drawable/dropdown"/>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ListView
+                android:id="@+id/suggestionSearchListLV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"></ListView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/postListLocationBtn"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="2"
+                android:text="Location"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:padding="10dp"
+                android:gravity="center_horizontal"
+                android:onClick="filterLocation"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:drawableLeft="@android:drawable/ic_dialog_map"
+                android:background="@drawable/button_back_style"/>
+
+            <Button
+                android:id="@+id/postListCategoryBtn"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="2"
+                android:background="@drawable/button_back_style"
+                android:drawableLeft="@android:drawable/stat_notify_more"
+                android:onClick="filterCategory"
+                android:padding="10dp"
+                android:text="Categories"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/swipeRefresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/postListRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </android.support.v7.widget.RecyclerView>
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:layout_alignBottom="@id/swipeRefresh"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentEnd="false"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_back_style"
+                android:onClick="goToAddPostActivity"
+                android:src="@drawable/add_post"
+                android:padding="7dp"
+                />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</layout>

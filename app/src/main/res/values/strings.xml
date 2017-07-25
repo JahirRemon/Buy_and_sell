@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Buy &amp; Sell</string>
+    <string name="facebook_app_id">259814417759656</string>
+    <string name="title_activity_show_post_list">Ads List</string>
+    <string name="title_activity_show_fav_post_list">Favourite List</string>
+    <string name="title_activity_my_account">My Account</string>
+    <string name="title_activity_my_ads_list">My Ads</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_logOut">Log Out</string>
+    <string name="title_activity_add_post">Add Post</string>
+    <string name="title_activity_show_post_details">Show Post Details</string>
+
+    <string name="action_settings">Settings</string>
+</resources>
